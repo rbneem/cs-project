@@ -13,7 +13,6 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             id
             frontmatter {
-              template
               title
             }
             fields {

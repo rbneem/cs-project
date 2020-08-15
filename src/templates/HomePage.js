@@ -43,7 +43,6 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        subtitle
         featuredImage
       }
     }
