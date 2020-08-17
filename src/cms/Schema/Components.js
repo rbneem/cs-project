@@ -1,7 +1,5 @@
 // import Components from '../../components'
 
-// console.log(":::::", Components)
-
 export default [
   {
     label: 'All Components',
@@ -12,7 +10,7 @@ export default [
       { label: 'Title', name: 'title', widget: 'string' },
       { label: 'Publish Date', name: 'date', widget: 'datetime' },
       { label: 'Profile Image', name: 'thumbnail', widget: 'image' },
-      { label: 'Body', name: 'body', widget: 'markdown' }
+      { label: 'Body', name: 'body', widget: 'list' }
     ]
   }
 ]
