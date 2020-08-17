@@ -1,22 +1,25 @@
 import React from 'react'
 import CMS from 'netlify-cms-app'
 import './cms-utils'
+import HomePageTemplate from '../templates/HomePage'
 //Schema
-// import Blog from './Schema/blog'
 import productPage from './Schema/productPage'
 import Components from './Schema/Components'
-// import ProductPagePreview from './preview-templates/AboutPagePreview'
 
 import uploadcare from 'netlify-cms-media-library-uploadcare'
+import testimony from './Schema/ComponentsSchema/testimony'
+import client from './Schema/ComponentsSchema/client'
+import customer from './Schema/ComponentsSchema/customer'
 
 CMS.init({
   config: {
     backend: {
       name: 'git-gateway'
     },
+    local_backend: true,
     media_folder: '../../static/images/uploads',
     public_folder: '../../images/uploads',
-    collections: [...productPage, ...Components]
+    collections: [...productPage, ...Components, ...testimony, ...client, ...customer]
   }
 })
 
@@ -33,4 +36,4 @@ if (
   CMS.registerPreviewStyle('/styles.css')
 }
 
-// CMS.registerPreviewTemplate('homePage')
+CMS.registerPreviewTemplate(HomePageTemplate, 'homePage')
