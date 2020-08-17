@@ -14,6 +14,7 @@ CMS.init({
     backend: {
       name: 'git-gateway'
     },
+    local_backend: true,
     media_folder: '../../static/images/uploads',
     public_folder: '../../images/uploads',
     collections: [...productPage, ...Components]
