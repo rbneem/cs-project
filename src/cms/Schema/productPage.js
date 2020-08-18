@@ -7,8 +7,6 @@ import CardBlock from './CardBlock'
 import ClientLogo from './ClientLogo'
 import OurCustomers from './OurCustomers'
 import ImageSection from './ImageSection'
-import customer from './ComponentsSchema/customer'
-
 
 export default [
     {
@@ -31,10 +29,8 @@ export default [
                     ...CardBlock,
                     ...ClientLogo,
                     ...OurCustomers
-                    
                 ]
-            },
-            { label: 'Body', name: 'body', widget: 'markdown', required: false, collapsed: true},
+            }
         ]
     }
 ]

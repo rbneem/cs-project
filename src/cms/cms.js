@@ -1,15 +1,18 @@
 import React from 'react'
 import CMS from 'netlify-cms-app'
+import uploadcare from 'netlify-cms-media-library-uploadcare'
+
 import './cms-utils'
 import HomePageTemplate from '../templates/HomePage'
+
 //Schema
 import productPage from './Schema/productPage'
 import Components from './Schema/Components'
-
-import uploadcare from 'netlify-cms-media-library-uploadcare'
 import testimony from './Schema/ComponentsSchema/testimony'
 import client from './Schema/ComponentsSchema/client'
 import customer from './Schema/ComponentsSchema/customer'
+import card from './Schema/ComponentsSchema/card'
+import menu from './Schema/ComponentsSchema/menu'
 
 CMS.init({
   config: {
@@ -17,9 +20,17 @@ CMS.init({
       name: 'git-gateway'
     },
     local_backend: true,
-    media_folder: '../../static/images/uploads',
-    public_folder: '../../images/uploads',
-    collections: [...productPage, ...Components, ...testimony, ...client, ...customer]
+    media_folder: '../../static/images',
+    public_folder: '../../public',
+    collections: [
+      ...productPage, 
+      ...Components, 
+      ...testimony, 
+      ...client, 
+      ...customer,
+      ...card,
+      ...menu
+    ]
   }
 })
 
