@@ -3,7 +3,6 @@ import CMS from 'netlify-cms-app'
 import uploadcare from 'netlify-cms-media-library-uploadcare'
 
 import './cms-utils'
-import HomePageTemplate from '../templates/HomePage'
 
 //Schema
 import productPage from './Schema/productPage'
@@ -20,8 +19,8 @@ CMS.init({
       name: 'git-gateway'
     },
     local_backend: true,
-    media_folder: '../../static/images',
-    public_folder: '../../public',
+    media_folder: 'static/images',
+    public_folder: '/public',
     collections: [
       ...productPage, 
       ...Components, 
@@ -47,4 +46,3 @@ if (
   CMS.registerPreviewStyle('/styles.css')
 }
 
-CMS.registerPreviewTemplate(HomePageTemplate, 'homePage')
